@@ -1,0 +1,37 @@
+import { toast } from "react-toastify";
+
+export const showSuccessToast = (message: string) => {
+  toast.success(message);
+};
+
+export const showErrorToast = (message: string) => {
+  toast.error(message);
+};
+
+export const showInfoToast = (message: string) => {
+  toast.info(message);
+};
+
+export const showWarningToast = (message: string) => {
+  toast.warning(message);
+};
+
+export const showToast = (
+  message: string,
+  type: "success" | "error" | "info" | "warning" = "info",
+) => {
+  switch (type) {
+    case "success":
+      toast.success(message);
+      break;
+    case "error":
+      toast.error(message);
+      break;
+    case "info":
+      toast.info(message);
+      break;
+    case "warning":
+      toast.warning(message);
+      break;
+  }
+};

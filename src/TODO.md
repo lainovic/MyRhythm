@@ -1,0 +1,8 @@
+- [x] make blocks draggable
+- [x] fix TSS dark mode not working without adding a stacking context (the TEST div at the top)
+- [ ] refine rhythm blocks
+- [ ] full CRUD on blocks
+- [ ] how to save stuff like bgStyle?
+- [ ] multiple actions in the overlay
+- [ ] lock the session?
+- [ ] optimize FSM?

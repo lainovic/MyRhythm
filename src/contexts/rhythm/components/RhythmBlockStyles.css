@@ -1,0 +1,257 @@
+@keyframes gradient-x {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 3s ease infinite;
+}
+
+/* Fixed shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer-nature {
+  background: linear-gradient(
+    to right,
+    #22c55e 0%,
+    #16a34a 25%,
+    #15803d 50%,
+    #16a34a 75%,
+    #22c55e 100%
+  );
+  background-size: 200% 200%;
+  animation: shimmer 40s infinite;
+}
+
+.animate-shimmer-energetic {
+  background: linear-gradient(
+    to right,
+    #f59e0b 0%,
+    #f97316 25%,
+    #eab308 50%,
+    #f97316 75%,
+    #f59e0b 100%
+  );
+  background-size: 200% 200%;
+  animation: shimmer 40s infinite;
+}
+
+.animate-shimmer-ocean {
+  background: linear-gradient(
+    to right,
+    #0ea5e9 0%,
+    #06b6d4 25%,
+    #0891b2 50%,
+    #06b6d4 75%,
+    #0ea5e9 100%
+  );
+  background-size: 200% 200%;
+  animation: shimmer 40s infinite;
+}
+
+.animate-shimmer-earth {
+  background: linear-gradient(
+    to right,
+    #a16207 0%,
+    #92400e 25%,
+    #78350f 50%,
+    #92400e 75%,
+    #a16207 100%
+  );
+  background-size: 200% 200%;
+  animation: shimmer 40s infinite;
+}
+
+.animate-shimmer-neon {
+  background: linear-gradient(
+    to right,
+    #06b6d4 0%,
+    #8b5cf6 25%,
+    #ec4899 50%,
+    #8b5cf6 75%,
+    #06b6d4 100%
+  );
+  background-size: 200% 200%;
+  animation: shimmer 40s infinite;
+}
+
+.animate-shimmer-sunset {
+  background: linear-gradient(
+    to right,
+    #f97316 0%,
+    #ef4444 25%,
+    #ec4899 50%,
+    #ef4444 75%,
+    #f97316 100%
+  );
+  background-size: 200% 200%;
+  animation: shimmer 40s infinite;
+}
+
+.animate-shimmer-executive {
+  background: linear-gradient(
+    to right,
+    #1e40af 0%,
+    #475569 25%,
+    #6366f1 50%,
+    #475569 75%,
+    #1e40af 100%
+  );
+  background-size: 200% 200%;
+  animation: shimmer 40s infinite;
+}
+
+.animate-shimmer-cyber {
+  background: linear-gradient(
+    to right,
+    #3b82f6 0%,
+    #8b5cf6 25%,
+    #ec4899 50%,
+    #8b5cf6 75%,
+    #3b82f6 100%
+  );
+  background-size: 200% 200%;
+  animation: shimmer 40s infinite;
+}
+
+.animate-shimmer-warm {
+  background: linear-gradient(
+    to right,
+    #f59e0b 0%,
+    #f97316 25%,
+    #ef4444 50%,
+    #f97316 75%,
+    #f59e0b 100%
+  );
+  background-size: 200% 200%;
+  animation: shimmer 40s infinite;
+}
+
+.animate-shimmer-silver {
+  background: linear-gradient(
+    to right,
+    #94a3b8 0%,
+    #64748b 25%,
+    #475569 50%,
+    #64748b 75%,
+    #94a3b8 100%
+  );
+  background-size: 200% 200%;
+  animation: shimmer 40s infinite;
+}
+
+.animate-shimmer-golden {
+  background: linear-gradient(
+    to right,
+    #fbbf24 0%,
+    #f59e0b 25%,
+    #d97706 50%,
+    #f59e0b 75%,
+    #fbbf24 100%
+  );
+  background-size: 200% 200%;
+  animation: shimmer 40s infinite;
+}
+
+.animate-shimmer-sky {
+  background: linear-gradient(
+    to right,
+    #0ea5e9 0%,
+    #06b6d4 25%,
+    #ffffff 50%,
+    #06b6d4 75%,
+    #0ea5e9 100%
+  );
+  background-size: 200% 200%;
+  animation: shimmer 40s infinite;
+}
+
+.animate-shimmer-mint {
+  background: linear-gradient(
+    to right,
+    #10b981 0%,
+    #059669 25%,
+    #047857 50%,
+    #059669 75%,
+    #10b981 100%
+  );
+  background-size: 200% 200%;
+  animation: shimmer 40s infinite;
+}
+
+.animate-shimmer-turbo {
+  background: linear-gradient(
+    to right,
+    #ef4444 0%,
+    #dc2626 25%,
+    #b91c1c 50%,
+    #dc2626 75%,
+    #ef4444 100%
+  );
+  background-size: 200% 200%;
+  animation: shimmer 40s infinite;
+}
+
+.animate-shimmer-storm {
+  background: linear-gradient(
+    to right,
+    #475569 0%,
+    #1e293b 25%,
+    #0f172a 50%,
+    #1e293b 75%,
+    #475569 100%
+  );
+  background-size: 200% 200%;
+  animation: shimmer 40s infinite;
+}
+
+.animate-shimmer-lightning {
+  background: linear-gradient(
+    to right,
+    #fbbf24 0%,
+    #f59e0b 25%,
+    #d97706 50%,
+    #f59e0b 75%,
+    #fbbf24 100%
+  );
+  background-size: 200% 200%;
+  animation: shimmer 40s infinite;
+}
+
+.animate-shimmer-fire {
+  background: linear-gradient(
+    to right,
+    #dc2626 0%,
+    #b91c1c 25%,
+    #991b1b 50%,
+    #b91c1c 75%,
+    #dc2626 100%
+  );
+  background-size: 200% 200%;
+  animation: shimmer 40s infinite;
+}
+
+.animate-shimmer-cool {
+  background: linear-gradient(
+    90deg,
+    #0ea5e9 0%,
+    #3b82f6 30%,
+    #6366f1 60%,
+    #3b82f6 85%,
+    #0ea5e9 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 40s infinite;
+}
