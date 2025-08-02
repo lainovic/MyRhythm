@@ -1,0 +1,228 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* TODO remove this? */
+/* for smooth theme transitions - more specific to avoid conflicts, */
+/* but do allow Tailwind transitions to work properly */
+/* html, body {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+*:not(button):not([class*="transition"]):not([class*="animate"]) {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+} */
+
+:root {
+  --text-color: #1f2937;
+  --bg-color: hsl(99, 54%, 86%);
+}
+
+.dark {
+  --text-color: hsl(99, 54%, 86%);
+  --bg-color: hsl(99, 30%, 25%);
+}
+
+/* doesn't work */
+/* #root {
+  background: linear-gradient(
+    to right,
+    hsla(34, 85%, 95%, 0.2) 0%,
+    hsla(52, 73%, 84%, 0.2) 15%,
+    hsla(99, 54%, 86%, 0.2) 35%,
+    hsla(45, 100%, 99%, 0.1) 70%
+  );
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  background-attachment: fixed;
+} */
+
+.background {
+  position: fixed;
+  inset: 0;
+}
+
+.background::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    hsla(34, 85%, 95%, 0.9) 0%,
+    hsla(52, 73%, 84%, 0.9) 15%,
+    hsla(99, 54%, 86%, 0.9) 35%,
+    /* hsla(45, 100%, 99%, 0.9) 50%, */ hsla(99, 54%, 86%, 0.9) 65%,
+    hsla(52, 73%, 84%, 0.9) 85%,
+    hsla(34, 85%, 95%, 0.9) 100%
+  );
+  opacity: 1;
+  animation: gradual-opacity 8s ease-in-out infinite;
+  transition: opacity 0.5s ease;
+}
+.dark .background::before {
+  opacity: 0;
+}
+
+.background::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    hsla(220, 30%, 25%, 1) 0%,
+    hsla(220, 28%, 24%, 1) 20%,
+    hsla(220, 25%, 22%, 1) 40%,
+    hsla(220, 22%, 20%, 1) 60%,
+    hsla(220, 25%, 22%, 1) 80%,
+    hsla(220, 30%, 25%, 1) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.dark .background::after {
+  opacity: 1;
+}
+
+.theme-text {
+  color: var(--text-color);
+}
+
+.theme-bg {
+  background-color: var(--bg-color);
+}
+
+.logo-shimmer-overlay {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 138, 0, 0.1) 20%,
+    rgba(255, 215, 0, 0.3) 35%,
+    rgba(233, 30, 99, 0.4) 50%,
+    rgba(156, 39, 176, 0.3) 65%,
+    rgba(0, 188, 212, 0.2) 80%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 40s ease-in-out infinite;
+}
+
+.text-shimmer-overlay {
+  display: inline-block;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 138, 0, 0.1) 20%,
+    rgba(255, 215, 0, 0.3) 35%,
+    rgba(233, 30, 99, 0.4) 50%,
+    rgba(156, 39, 176, 0.3) 65%,
+    rgba(0, 188, 212, 0.2) 80%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 40s ease-in-out infinite;
+  /* mix-blend-mode: overlay; */
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes opacity-pulse {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes gradual-opacity {
+  0% {
+    opacity: 0.1;
+  }
+  10% {
+    opacity: 0.15;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 0.25;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.3;
+  }
+  70% {
+    opacity: 0.25;
+  }
+  80% {
+    opacity: 0.2;
+  }
+  90% {
+    opacity: 0.15;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out;
+}
+
+.shimmer-mask {
+  mask: url("/src/assets/logo.png") no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url("/src/assets/logo.png") no-repeat center;
+  -webkit-mask-size: contain;
+}
+
+.smooth-resize {
+  transition:
+    width 0.3s ease-in-out,
+    height 0.3s ease-in-out;
+}
+
+.smooth-transitions {
+  transition:
+    all 0.3s ease-in-out,
+    height 0.3s ease-in-out;
+}
+
+.smooth-height {
+  transition:
+    height 0.3s ease-in-out,
+    max-height 0.3s ease-in-out;
+}
